@@ -1,7 +1,10 @@
 package com.hankcraft.forge.mods;
 
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
@@ -42,6 +45,25 @@ public class Main {
 		GameRegistry.registerBlock( enderBlock, "enderBlock" );
         enderIngot = new EnderIngot();
         GameRegistry.registerItem(enderIngot, "enderIngot");
+
+        GameRegistry.addRecipe(
+                new ItemStack(enderBlock),
+                "d d",
+                " d ",
+                "ddd",
+                'd', enderIngot
+        );
+        GameRegistry.addShapelessRecipe(
+                new ItemStack(enderIngot, 8),
+                new ItemStack(enderBlock)
+        );
+
+        GameRegistry.addShapelessRecipe(
+                new ItemStack(enderIngot, 12),
+                new ItemStack(enderBlock, 1),
+                new ItemStack(Items.iron_ingot),
+                new ItemStack(Items.gold_ingot)
+        );
 
 	}
 	
