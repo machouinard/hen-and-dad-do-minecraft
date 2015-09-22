@@ -7,11 +7,14 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.item.EntityEnderEye;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class EnderBlock extends Block {
 
@@ -29,8 +32,16 @@ public class EnderBlock extends Block {
     public void onBlockAdded( World world, BlockPos pos, IBlockState state ) {
         IBlockState block = world.getBlockState(pos.add(0, -1, 0));
         world.setBlockState(pos, block);
-        EntityLightningBolt lightning = new EntityLightningBolt(world, pos.getX(), pos.getY(), pos.getZ());
-        world.addWeatherEffect( lightning );
+//        EntityLightningBolt lightning = new EntityLightningBolt(world, pos.getX(), pos.getY(), pos.getZ());
+//        world.addWeatherEffect( lightning );
+    }
+
+    public Item getItemDropped(int i1, Random random, int i2) {
+        return Main.enderIngot;
+    }
+
+    public int quantityDropped(Random random) {
+        return random.nextInt(2) + 3;
     }
 
 //    @Override
