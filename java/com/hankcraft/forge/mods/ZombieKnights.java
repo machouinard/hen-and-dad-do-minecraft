@@ -7,15 +7,12 @@ import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class ZombieKnights {
-
 	@SubscribeEvent
 	public void giveArmor(EntityJoinWorldEvent event) {
 		if (!(event.entity instanceof EntityZombie)) {
 			return;
 		}
-		
 		EntityZombie zombie = (EntityZombie) event.entity;
-		
 		zombie.setCurrentItemOrArmor(0, new ItemStack(Items.diamond_axe));
 		zombie.setCurrentItemOrArmor(1, new ItemStack(Items.diamond_chestplate));
 		zombie.setCurrentItemOrArmor(2, new ItemStack(Items.diamond_leggings));
