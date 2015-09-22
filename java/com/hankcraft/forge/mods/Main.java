@@ -21,7 +21,7 @@ public class Main {
 	public static final String MODID = "MyMods";
 	public static final String VERSION = "2.0";
 
-	public static Block enderBlock;
+	public static Block cheeseBlock;
 	public static Item enderIngot;
 
 	@EventHandler
@@ -46,16 +46,16 @@ public class Main {
 		MinecraftForge.EVENT_BUS.register(new GolemWallClimb());
 		MinecraftForge.EVENT_BUS.register(new BlockFillerPositionSelector());
 
-		enderBlock = new EnderBlock();
-		// enderBlock = new BlockChanger();
-		// enderBlock = new TheMajesticEnderiumBlock();
-		// enderBlock = new EnderIngotFromEnderBlock();
-		GameRegistry.registerBlock(enderBlock, "enderBlock");
-		Item enderBlockItem = GameRegistry.findItem("mymods", "enderBlock");
-		ModelResourceLocation enderBlockModel = new ModelResourceLocation(
-				"mymods:enderBlock", "inventory");
+		cheeseBlock = new CheeseBlock();
+		// cheeseBlock = new BlockChanger();
+		// cheeseBlock = new TheMajesticEnderiumBlock();
+		// cheeseBlock = new EnderIngotFromCheeseBlock();
+		GameRegistry.registerBlock(cheeseBlock, "cheeseBlock");
+		Item cheeseBlockItem = GameRegistry.findItem("mymods", "cheeseBlock");
+		ModelResourceLocation cheeseBlockModel = new ModelResourceLocation(
+				"mymods:cheeseBlock", "inventory");
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-				.register(enderBlockItem, 0, enderBlockModel);
+				.register(cheeseBlockItem, 0, cheeseBlockModel);
 
 //		enderIngot = new EnderIngot();
 		// enderIngot = new EndermanSpawner();
@@ -70,17 +70,17 @@ public class Main {
 		GameRegistry.addRecipe(new ItemStack(Blocks.cobblestone), "dd", "dd",
 				'd', Blocks.dirt);
 
-		GameRegistry.addRecipe(new ItemStack(enderBlock), "iii", "iii", "iii",
+		GameRegistry.addRecipe(new ItemStack(cheeseBlock), "iii", "iii", "iii",
 				'i', enderIngot);
 
-		GameRegistry.addRecipe(new ItemStack(enderBlock), "e e", " o ", "e e",
+		GameRegistry.addRecipe(new ItemStack(cheeseBlock), "e e", " o ", "e e",
 				'o', Blocks.obsidian, 'e', Items.ender_eye);
 
 		GameRegistry.addShapelessRecipe(new ItemStack(enderIngot, 9),
-				new ItemStack(enderBlock));
+				new ItemStack(cheeseBlock));
 
 		GameRegistry.addShapelessRecipe(new ItemStack(enderIngot, 12),
-				new ItemStack(enderBlock, 1), new ItemStack(Items.iron_ingot),
+				new ItemStack(cheeseBlock, 1), new ItemStack(Items.iron_ingot),
 				new ItemStack(Items.gold_ingot));
 
 		GameRegistry.addSmelting(Items.ender_pearl,

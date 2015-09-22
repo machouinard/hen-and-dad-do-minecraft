@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 public class BlockChanger extends Block {
 	public BlockChanger() {
 		super(Material.iron);
-		this.setUnlocalizedName("enderBlock");
+		this.setUnlocalizedName("cheeseBlock");
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setResistance(5.0F);
 		this.setHardness(10.0F);

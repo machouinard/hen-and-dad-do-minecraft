@@ -15,7 +15,7 @@ import net.minecraft.world.World;
 public class TheMajesticEnderiumBlock extends Block {
 	public TheMajesticEnderiumBlock() {
 		super(Material.iron);
-		this.setUnlocalizedName("enderBlock");
+		this.setUnlocalizedName("cheeseBlock");
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setResistance(5.0F);
 		this.setHardness(10.0F);

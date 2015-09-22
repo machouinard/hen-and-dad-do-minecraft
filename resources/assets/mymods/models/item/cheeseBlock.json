@@ -1,5 +1,5 @@
 {
-  "parent": "mymods:block/enderBlock",
+  "parent": "mymods:block/cheeseBlock",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

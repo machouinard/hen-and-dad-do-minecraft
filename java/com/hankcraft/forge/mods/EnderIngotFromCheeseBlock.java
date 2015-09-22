@@ -7,10 +7,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class EnderIngotFromEnderBlock extends Block {
-	public EnderIngotFromEnderBlock() {
+public class EnderIngotFromCheeseBlock extends Block {
+	public EnderIngotFromCheeseBlock() {
 		super(Material.iron);
-//		this.setBlockName("enderBlock");
+//		this.setBlockName("cheeseBlock");
 		this.setCreativeTab(CreativeTabs.tabBlock);
 //		this.textureName = "mymods:ender_block";
 		this.setResistance(5.0F);
