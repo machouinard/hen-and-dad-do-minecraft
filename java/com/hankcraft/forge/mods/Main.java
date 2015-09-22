@@ -26,7 +26,6 @@ public class Main {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		MinecraftForge.EVENT_BUS.register(new BlockBreakMessage());
 		MinecraftForge.EVENT_BUS.register(new ExplodingMinecarts());
 		MinecraftForge.EVENT_BUS.register(new ExplodingAnvils());
 		MinecraftForge.EVENT_BUS.register(new DiamondOreTrap());
@@ -66,9 +65,6 @@ public class Main {
 				"mymods:cheeseIngot", "inventory");
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
 				.register(cheeseIngot, 0, cheeseIngotModel);
-
-		GameRegistry.addRecipe(new ItemStack(Blocks.cobblestone), "dd", "dd",
-				'd', Blocks.dirt);
 
 		GameRegistry.addRecipe(new ItemStack(cheeseBlock), "iii", "iii", "iii",
 				'i', cheeseIngot);
