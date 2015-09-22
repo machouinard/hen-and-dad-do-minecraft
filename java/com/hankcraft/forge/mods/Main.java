@@ -35,9 +35,7 @@ public class Main {
 
 		MinecraftForge.EVENT_BUS.register(new PigsDroppingDiamonds());
 		MinecraftForge.EVENT_BUS.register(new ZombieKnights());
-		MinecraftForge.EVENT_BUS.register(new CreeperReinforcements());
 
-		// MinecraftForge.EVENT_BUS.register(new SuperJump());
 		MinecraftForge.EVENT_BUS.register(new BouncySponges());
 
 		FMLCommonHandler.instance().bus().register(new Parachute());
@@ -45,10 +43,9 @@ public class Main {
 		MinecraftForge.EVENT_BUS.register(new GolemWallClimb());
 		MinecraftForge.EVENT_BUS.register(new BlockFillerPositionSelector());
 
-		cheeseBlock = new CheeseBlock();
+//		cheeseBlock = new CheeseBlock();
 		// cheeseBlock = new BlockChanger();
-		// cheeseBlock = new TheMajesticEnderiumBlock();
-		// cheeseBlock = new CheeseIngotFromCheeseBlock();
+		 cheeseBlock = new CheeseIngotFromCheeseBlock();
 		GameRegistry.registerBlock(cheeseBlock, "cheeseBlock");
 		Item cheeseBlockItem = GameRegistry.findItem("mymods", "cheeseBlock");
 		ModelResourceLocation cheeseBlockModel = new ModelResourceLocation(
