@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class Main {
 
 	public static final String MODID = "myMods";
-	public static final String NAME = "Hank Mod";
+	public static final String NAME = "Hank's Mods";
 	public static final String VERSION = "1.0";
 	public static Block enderBlock;
     public static Item enderIngot;
