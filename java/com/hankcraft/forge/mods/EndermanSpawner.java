@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 public class EndermanSpawner extends Item {
 	public EndermanSpawner() {
 		super();
-		this.setUnlocalizedName("enderIngot");
+		this.setUnlocalizedName("cheeseIngot");
 		this.setCreativeTab(CreativeTabs.tabMaterials);
 	}
 

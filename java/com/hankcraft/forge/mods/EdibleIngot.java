@@ -8,7 +8,7 @@ public class EdibleIngot extends ItemFood {
 		super(5, 1.0F, true);
 		this.setPotionEffect(1, 60, 2, 0.5F);
 		this.setAlwaysEdible();
-		this.setUnlocalizedName("enderIngot");
+		this.setUnlocalizedName("cheeseIngot");
 		this.setCreativeTab(CreativeTabs.tabMaterials);
 	}
 }

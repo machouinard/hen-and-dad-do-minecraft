@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "mymods:items/enderIngot"
+        "layer0": "mymods:items/cheeseIngot"
     },
     "display": {
         "thirdperson": {

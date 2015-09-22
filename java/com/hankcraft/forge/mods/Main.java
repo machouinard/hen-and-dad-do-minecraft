@@ -22,7 +22,7 @@ public class Main {
 	public static final String VERSION = "2.0";
 
 	public static Block cheeseBlock;
-	public static Item enderIngot;
+	public static Item cheeseIngot;
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
@@ -49,7 +49,7 @@ public class Main {
 		cheeseBlock = new CheeseBlock();
 		// cheeseBlock = new BlockChanger();
 		// cheeseBlock = new TheMajesticEnderiumBlock();
-		// cheeseBlock = new EnderIngotFromCheeseBlock();
+		// cheeseBlock = new CheeseIngotFromCheeseBlock();
 		GameRegistry.registerBlock(cheeseBlock, "cheeseBlock");
 		Item cheeseBlockItem = GameRegistry.findItem("mymods", "cheeseBlock");
 		ModelResourceLocation cheeseBlockModel = new ModelResourceLocation(
@@ -57,34 +57,34 @@ public class Main {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
 				.register(cheeseBlockItem, 0, cheeseBlockModel);
 
-//		enderIngot = new EnderIngot();
-		// enderIngot = new EndermanSpawner();
-		 enderIngot = new EdibleIngot();
-		GameRegistry.registerItem(enderIngot, "enderIngot");
-		Item enderIngotItem = GameRegistry.findItem("mymods", "enderIngot");
-		ModelResourceLocation enderIngotModel = new ModelResourceLocation(
-				"mymods:enderIngot", "inventory");
+//		cheeseIngot = new CheeseIngot();
+		// cheeseIngot = new EndermanSpawner();
+		 cheeseIngot = new EdibleIngot();
+		GameRegistry.registerItem(cheeseIngot, "cheeseIngot");
+		Item cheeseIngotItem = GameRegistry.findItem("mymods", "cheeseIngot");
+		ModelResourceLocation cheeseIngotModel = new ModelResourceLocation(
+				"mymods:cheeseIngot", "inventory");
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-				.register(enderIngot, 0, enderIngotModel);
+				.register(cheeseIngot, 0, cheeseIngotModel);
 
 		GameRegistry.addRecipe(new ItemStack(Blocks.cobblestone), "dd", "dd",
 				'd', Blocks.dirt);
 
 		GameRegistry.addRecipe(new ItemStack(cheeseBlock), "iii", "iii", "iii",
-				'i', enderIngot);
+				'i', cheeseIngot);
 
 		GameRegistry.addRecipe(new ItemStack(cheeseBlock), "e e", " o ", "e e",
 				'o', Blocks.obsidian, 'e', Items.ender_eye);
 
-		GameRegistry.addShapelessRecipe(new ItemStack(enderIngot, 9),
+		GameRegistry.addShapelessRecipe(new ItemStack(cheeseIngot, 9),
 				new ItemStack(cheeseBlock));
 
-		GameRegistry.addShapelessRecipe(new ItemStack(enderIngot, 12),
+		GameRegistry.addShapelessRecipe(new ItemStack(cheeseIngot, 12),
 				new ItemStack(cheeseBlock, 1), new ItemStack(Items.iron_ingot),
 				new ItemStack(Items.gold_ingot));
 
 		GameRegistry.addSmelting(Items.ender_pearl,
-				new ItemStack(enderIngot, 1), 1.0F);
+				new ItemStack(cheeseIngot, 1), 1.0F);
 
 		Items.cake.setPotionEffect(PotionHelper.blazePowderEffect);
 	}

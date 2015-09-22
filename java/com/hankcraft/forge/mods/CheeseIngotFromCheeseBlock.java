@@ -7,8 +7,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class EnderIngotFromCheeseBlock extends Block {
-	public EnderIngotFromCheeseBlock() {
+public class CheeseIngotFromCheeseBlock extends Block {
+	public CheeseIngotFromCheeseBlock() {
 		super(Material.iron);
 //		this.setBlockName("cheeseBlock");
 		this.setCreativeTab(CreativeTabs.tabBlock);
@@ -20,7 +20,7 @@ public class EnderIngotFromCheeseBlock extends Block {
 	
 	public Item getItemDropped(int i1, Random random, int i2)
     {
-        return Main.enderIngot;
+        return Main.cheeseIngot;
     }
 	
 	public int quantityDropped(Random random)

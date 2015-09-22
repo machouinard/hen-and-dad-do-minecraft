@@ -3,10 +3,10 @@ package com.hankcraft.forge.mods;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class EnderIngot extends Item {
-	public EnderIngot() {
+public class CheeseIngot extends Item {
+	public CheeseIngot() {
 		super();
-		this.setUnlocalizedName("enderIngot");
+		this.setUnlocalizedName("cheeseIngot");
 		this.setCreativeTab(CreativeTabs.tabMaterials);
 	}
 }
