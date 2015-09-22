@@ -65,6 +65,12 @@ public class Main {
                 new ItemStack(Items.gold_ingot)
         );
 
+        GameRegistry.addSmelting(
+                Items.ender_pearl,
+                new ItemStack(enderIngot, 2),
+                2.75F
+        );
+
 	}
 	
 	@EventHandler
