@@ -27,8 +27,6 @@ public class Main {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		MinecraftForge.EVENT_BUS.register(new BiggerTNTExplosionsWithFuse());
-		// MinecraftForge.EVENT_BUS.register(new
-		// BiggerTNTExplosionsWithoutFuse());
 
 		MinecraftForge.EVENT_BUS.register(new BouncySponges());
 

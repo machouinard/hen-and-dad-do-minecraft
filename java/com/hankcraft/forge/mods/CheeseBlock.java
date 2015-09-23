@@ -22,7 +22,6 @@ public class CheeseBlock extends Block {
 		this.setResistance(5.0F);
 		this.setHardness(10.0F);
 		this.setLightLevel(1.0F);
-        System.out.println("XXXXXXXXXXXXX");
 	}
 
 	public Item getItemDropped(int i1, Random random, int i2)

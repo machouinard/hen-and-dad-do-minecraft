@@ -12,7 +12,7 @@ public class CheeseIngotFromCheeseBlock extends Block {
 		super(Material.iron);
 //		this.setBlockName("cheeseBlock");
 		this.setCreativeTab(CreativeTabs.tabBlock);
-//		this.textureName = "mymods:cheeseblock";
+//		this.textureName = "mymods:cheeseBlock";
 		this.setResistance(5.0F);
 		this.setHardness(10.0F);
 		this.setLightLevel(1.0F);
