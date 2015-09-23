@@ -26,15 +26,9 @@ public class Main {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		MinecraftForge.EVENT_BUS.register(new ExplodingMinecarts());
-		MinecraftForge.EVENT_BUS.register(new ExplodingAnvils());
-		MinecraftForge.EVENT_BUS.register(new DiamondOreTrap());
 		MinecraftForge.EVENT_BUS.register(new BiggerTNTExplosionsWithFuse());
 		// MinecraftForge.EVENT_BUS.register(new
 		// BiggerTNTExplosionsWithoutFuse());
-
-		MinecraftForge.EVENT_BUS.register(new PigsDroppingDiamonds());
-		MinecraftForge.EVENT_BUS.register(new ZombieKnights());
 
 		MinecraftForge.EVENT_BUS.register(new BouncySponges());
 
@@ -84,7 +78,6 @@ public class Main {
 
 	@EventHandler
 	public void registerCommands(FMLServerStartingEvent event) {
-		event.registerServerCommand(new FlamingPigs());
 		event.registerServerCommand(new BlockFillCommand());
 	}
 }

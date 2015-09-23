@@ -22,6 +22,7 @@ public class CheeseBlock extends Block {
 		this.setResistance(5.0F);
 		this.setHardness(10.0F);
 		this.setLightLevel(1.0F);
+        System.out.println("XXXXXXXXXXXXX");
 	}
 
 	public Item getItemDropped(int i1, Random random, int i2)
@@ -35,8 +36,8 @@ public class CheeseBlock extends Block {
 	}
 
 	public void onEntityWalking(World world, int par2, int par3, int par4, Entity entity ) {
-		if(entity instanceof EntityPlayer) {
-			((EntityPlayer) entity).addPotionEffect(new PotionEffect(Potion.confusion.getId(), 100, 3));
+		if(entity instanceof EntityLivingBase) {
+			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(15, 100, 3));
 		}
 	}
 
